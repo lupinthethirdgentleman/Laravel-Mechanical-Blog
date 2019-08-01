@@ -15,6 +15,10 @@ footer .container {
     /* overflow: hidden; */
 }
 
+.container1 {
+    
+}
+
 @media (min-width: 1200px){
     .container {
         width: 1034px!important;

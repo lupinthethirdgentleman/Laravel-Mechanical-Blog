@@ -161,52 +161,64 @@
         <img src="{{asset('assets_anwarhx/img/mh.jpg')}}" alt="header-image">
     </div>
 
-    <div class="container" style="padding-top: 20px;padding-bottom: 157px;">
-        <h2 style="color: #05acf0; font-weight: 600">Members Listing</h2>
-        <hr>
+    <div class="sub-image" style="display: flex; justify-content: center;">
+        <img src="{{asset('assets_anwarhx/img/1.png')}}" alt="sub-image">
+    </div>
 
-        <div>
-            <h3 style="color: #05acf0">Search Product</h3>
-            <div class="row">
+    <div class="sub1-image" style="margin-left: 20%;">
+        <h3>Fit it with us and receive</h3>
+        <img src="{{asset('assets_anwarhx/img/2.png')}}" alt="sub1-image">
+        <h4>Terms and conditions apply</h4>
+    </div>
 
-                <div class="col-3">
-                    <input class="form-control" style="width: 90%;padding: 3px 12px;" type="text" placeholder="Make">
-                </div>
-                <div class="col-3">
-                    <input class="form-control" style="width: 90%;padding: 3px 12px;" type="text" placeholder="Model">
-                </div>
-                <div class="col-3">
-                    <input class="form-control" style="width: 90%;padding: 3px 12px;" type="text" placeholder="Year">
-                </div>
+    <div class="container1" style="padding-top: 20px;padding-bottom: 157px; padding-left:15%;">
+        
+        <div class="row">
+            <div class="col-md-2">
+                <h3 style="color: #05acf0">Search Product</h3>
+                <!-- <div class="row"> -->
 
-                <div class="col-3">
-                    <button class="btn btn-primary btn-lg" style="margin-left: 30px;padding: 9px 30px;border-radius: 25px;">Search</button>
-                </div>
+                    <div class="">
+                        <input class="form-control" style="width: 90%;padding: 3px 12px;" type="text" placeholder="Make">
+                    </div>
+                    <br>
+                    <div class="">
+                        <input class="form-control" style="width: 90%;padding: 3px 12px;" type="text" placeholder="Model">
+                    </div>
+                    <br>
+                    <div class="">
+                        <input class="form-control" style="width: 90%;padding: 3px 12px;" type="text" placeholder="Year">
+                    </div>
+                    <br>
+                    <div class="">
+                        <button class="btn btn-primary btn-lg" style="margin-left: 30px;padding: 9px 30px;border-radius: 25px;">Search</button>
+                    </div>
 
+                <!-- </div> -->
             </div>
-        </div>
-        <hr>
+       
 
-        <div class="row stock_img">
+            <div class="col-md-8">
 
-            @foreach($stocks as $stock)
+                @foreach($stocks as $stock)
 
-                <div class="stock_img_div">
-                    <img height="150" width="270" src="{{asset('image/stock')}}/{{$stock->id}}/{{$stock->stock_image}}">
-                    <h3 style="color: #05acf0;">{{$stock->name}}</h3>
-                    <p>Date added: {{$stock->created_at}}</p>
-                    <button type="button" class="btn btn-primary btn-lg details" data-id = "{{$stock->id}}"
-                            data-name="{{$stock->name}}" data-price="{{$stock->price}}" data-make="{{$stock->make}}"
-                            data-model="{{$stock->stock_model}}" data-year="{{$stock->year}}"
-                            data-description="{{$stock->description}}" data-image="{{$stock->stock_image}}"
-                            data-image_1 = "{{$stock->image_1}}" data-image_2 = "{{$stock->image_2}}"
-                            data-image_3 = "{{$stock->image_3}}" data-image_4 = "{{$stock->image_4}}" >Details</button>
-                </div>
+                    <div class="stock_img_div">
+                        <img height="150" width="270" src="{{asset('image/stock')}}/{{$stock->id}}/{{$stock->stock_image}}">
+                        <h3 style="color: #05acf0;">{{$stock->name}}</h3>
+                        <p>Date added: {{$stock->created_at}}</p>
+                        <button type="button" class="btn btn-primary btn-lg details" data-id = "{{$stock->id}}"
+                                data-name="{{$stock->name}}" data-price="{{$stock->price}}" data-make="{{$stock->make}}"
+                                data-model="{{$stock->stock_model}}" data-year="{{$stock->year}}"
+                                data-description="{{$stock->description}}" data-image="{{$stock->stock_image}}"
+                                data-image_1 = "{{$stock->image_1}}" data-image_2 = "{{$stock->image_2}}"
+                                data-image_3 = "{{$stock->image_3}}" data-image_4 = "{{$stock->image_4}}" >Details</button>
+                    </div>
 
-            @endforeach
+                @endforeach
+            </div>
 
 
-            <!-- The Modal -->
+                <!-- The Modal -->
             <div id="myModa" class="moda">
 
                 <!-- Modal content -->
@@ -249,6 +261,8 @@
                 </div>
 
             </div>
+
+            
 
         </div>
 
