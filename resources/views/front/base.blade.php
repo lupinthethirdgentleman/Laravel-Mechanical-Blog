@@ -38,34 +38,34 @@
         <div class="logo">
             <a href="{{asset('/')}}"><img src="{{asset('assets_anwarhx/img/logo')}}/{{$contact->logo}}" alt="Just Jap Auto Care"></a>
         </div>
-
+        
         <nav class="mainnav">
             <ul>
-                <li><a class="li1" href="{{asset('/')}}" title="Home">Home</a></li>
-                <li><a class="li2" href="{{asset('/mechanical')}}" title="Mechanical">Mechanical</a></li>
-                <li><a class="li3" href="{{asset('/tyres')}}" title="Tyres">Tyres</a></li>
-                <li><a class="li4" href="{{asset('/body_works')}}" title="Body Works">Body Works</a></li>
-                <li><a class="li5" href="{{asset('/toyota_spares')}}" title="Toyota Spares">Toyota Spares</a></li>
-                <li><a class="li6 {{Request::is('contact')?'active':''}}" href="{{asset('/contact')}}" title="Contact">Contact</a></li>
-                <li><a class="li7 {{Request::is('stock')?'active':''}}" href="{{asset('/stock')}}" title="Stock">Stock Listings</a></li>
+                <li><a class="li1" href="/" title="Home">Home</a></li>
+                <li><a class="li2" href="/mechanical" title="Mechanical">Mechanical</a></li>
+                <li><a class="li3" href="/tyres" title="Tyres">Tyres</a></li>
+                <li><a class="li4" href="/body_works" title="Body Works">Body Works</a></li>
+                <li><a class="li5" href="/toyota_spares" title="Toyota Spares">Toyota Spares</a></li>
+                <li><a class="li6 {{Request::is('contact')?'active':''}}" href="/contact" title="Contact">Contact</a></li>
+                <li><a class="li7 {{Request::is('stock')?'active':''}}" href="/stock" title="Stock">Stock Listings</a></li>
 
             </ul>
         </nav>
 
-        <div class="bars"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <!-- <div class="bars"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
         <div class="btrigger">
             <ul>
-                <li><a class="li1 active" href="{{asset('/')}}" title="Home">Home</a></li>
-                <li><a class="li2" href="{{asset('/mechanical')}}" title="Mechanical">Mechanical</a></li>
-                <li><a class="li3" href="{{asset('/tyres')}}" title="Tyres">Tyres</a></li>
-                <li><a class="li4" href="{{asset('/body_works')}}" title="Body Works">Body Works</a></li>
-                <li><a class="li5" href="{{asset('/toyota_spares')}}" title="Toyota Spares">Toyota Spares</a></li>
-                <li><a class="li6" href="{{asset('/contact')}}" title="Contact">Contact</a></li>
-                <li><a class="li7" href="{{asset('/stock')}}" title="Stock">Stock Listings</a></li>
+                <li><a class="li1 active" href="/" title="Home">Home</a></li>
+                <li><a class="li2" href="/mechanical" title="Mechanical">Mechanical</a></li>
+                <li><a class="li3" href="/tyres" title="Tyres">Tyres</a></li>
+                <li><a class="li4" href="/body_works" title="Body Works">Body Works</a></li>
+                <li><a class="li5" href="/toyota_spares" title="Toyota Spares">Toyota Spares</a></li>
+                <li><a class="li6" href="/contact" title="Contact">Contact</a></li>
+                <li><a class="li7" href="/stock" title="Stock">Stock Listings</a></li>
 
             </ul>
-        </div>
+        </div> -->
     </div>
 </header>
 

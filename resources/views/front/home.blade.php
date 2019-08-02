@@ -50,6 +50,15 @@
                 top: 0px !important;
             }
 
+            .moda {
+                padding-top: 61px !important;
+                padding-bottom: 61px !important;
+
+            }
+            .moda .modal-content{
+                width: 356px !important;
+            }
+
         }
 
         /* .part_5 {
@@ -77,6 +86,62 @@
             margin-left:auto;
             margin-right:auto;
         }
+
+        .moda {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 701; /* Sit on top */
+            padding-top: 138px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 86%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+        }
+
+        /* Modal Content */
+        .moda .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            border-radius: 16px;
+            width: 730px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+
+        .clos {
+            color: #05acf0;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .clos:hover,
+        .clos:focus {
+            color: #05acf0;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            padding: 2px 16px;
+            /*background-color: #5cb85c;*/
+            color: #05acf0;
+            border-bottom: 1px solid;
+        }
+
+        .modal-body {padding: 2px 16px 20px;margin: 0}
+
+
 
     </style>
 
@@ -146,6 +211,31 @@
             autoplay: true,
             autoplaySpeed: 6000,
         });
+
+        // $('.bookonline').click(function () {
+        //     alert("this");
+        //     $('#myModa').css('display','block');
+
+        // });
+
+        // $('span.clos').click(function () {
+        //     $('#myModa').css('display','none');
+        // });
+
+        // $(window).click(function(e) {
+        //     if (e.target == $('#myModa')) {
+        //         $('#myModa').css('display','none');
+        //     }
+        // });
+
+        // modal = document.getElementById("myModa");
+
+        // window.onclick = function(event)
+        // {
+        //     if (event.target == modal) {
+        //         modal.style.display = "none";
+        //     }
+        // }
     </script>
 
 @endsection
@@ -153,7 +243,7 @@
 
 @section('footer')
     <div class="container">
-        <div class="abs"><a href="#">Book Online</a></div>
+        <div class="abs"><a class="bookonline" href="#">Book Online</a></div>
         <a class="cta" href="tel:08 8369 1899">Call Now</a>
         <h1>Auto Repair Adelaide</h1>
         <p align="justify">Just Jap Auto is your one stop shop for all your Auto Repair Needs in Adelaide. Our workshop is equipped with latest equipment’s to ensure our quality and job accuracy. One stop Auto Repair Adelaide = Just Jap Auto</p>
@@ -166,4 +256,113 @@
         </div>
         <div class="copyright">© 2019 Just Jap auto care center. All rights reserved. </div>
     </div>
+
+    <div id="myModa" class="moda">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="clos">&times;</span>
+                <h2>Book Online</h2>
+            </div>
+            <div class="modal-body row">
+                <br>
+                <form class="form-horizontal form_contact">
+                    
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" id="sample1">
+                    <label class="mdl-textfield__label" for="sample1">Text...</label>
+                </div>
+                    <div class="form-group contact_input">
+                        <div class="col-sm-10">
+                            <input type="text"  id="first_name" name="first_name" placeholder="Enter first name" autocomplete="off" required>
+                        </div>
+                        <label class="control-label col-sm-2" for="first_name" style="float: right">First Name : </label>
+
+                    </div>
+                    <div class="form-group contact_input">
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter last name" autocomplete="off" required>
+                        </div>
+                        <label class="control-label col-sm-2" for="last_name" style="float: right">Last Name :</label>
+
+                    </div>
+                    <div class="form-group contact_input">
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="contact_no" name="contact_no" placeholder="Enter contact No" autocomplete="off" required>
+                        </div>
+                        <label class="control-label col-sm-2" for="contact_no" style="float: right">Contact No : </label>
+
+                    </div>
+
+                    <div class="form-group contact_input">
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="make" name="make" placeholder="Enter make" autocomplete="off" required>
+                        </div>
+                        <label class="control-label col-sm-2" for="make" style="float: right">Make : </label>
+
+                    </div>
+                    <div class="form-group contact_input">
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="model" name="model" placeholder="Enter model" autocomplete="off" required>
+                        </div>
+                        <label class="control-label col-sm-2" for="model" style="float: right">Model : </label>
+
+                    </div>
+                    <div class="form-group contact_input">
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="year" name="year" placeholder="Enter year" autocomplete="off" required>
+                        </div>
+                        <label class="control-label col-sm-2" for="year" style="float: right">Year:</label>
+
+                    </div>
+
+                    <div class="form-group contact_input">
+                        <div class="col-sm-10">
+                            <input type="datetime-local" id="datetime" name="datetime" required>
+                        </div>
+                        <label class="control-label col-sm-2" for="datetime" style="float: right">Datetime:</label>
+
+                    </div>
+                    <br>
+
+                    <div class="form-group contact_input">
+                        <div class="col-sm-offset-2">
+                            <button type="submit" class="btn btn-default"><b>Submit</b></button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+@endsection
+
+@section('script')
+    <script>
+
+        $('.bookonline').click(function () {
+            $('#myModa').css('display','block');
+
+        });
+
+        $('span.clos').click(function () {
+            $('#myModa').css('display','none');
+        });
+
+        $(window).click(function(e) {
+            if (e.target == $('#myModa')) {
+                $('#myModa').css('display','none');
+            }
+        });
+
+        modal = document.getElementById("myModa");
+
+        window.onclick = function(event)
+        {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 @endsection

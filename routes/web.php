@@ -18,6 +18,7 @@ Route::get('/', function () {
 
     $data = DB::table('slides')->where('status','on')->get();
     $info = DB::table('contact_infos')->where('id','1')->get()->first();
+    
     return view('front.home',['slides'=>$data,'contact'=>$info]);
 });
 
