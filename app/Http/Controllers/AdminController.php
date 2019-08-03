@@ -270,7 +270,7 @@ class AdminController extends Controller
 
     public function create_mechanical_gallery(Request $request){
 
-        if ($request->hasFile('photos')){
+        if ($request->hasFile('photos') || $request->hasFile('videos')) {
 
             foreach ($request->file('photos') as $photo)
             {
@@ -335,10 +335,12 @@ class AdminController extends Controller
 
     public function create_body_works_gallery(Request $request){
 
-        if ($request->hasFile('photos')){
-
+        if ($request->hasFile('photos') || $request->hasFile('videos')){
+            // echo($request);
+            // exit(0);
             foreach ($request->file('photos') as $photo)
             {
+
                 $gallery = new Gallery();
 
                 $photo_name = $photo->getClientOriginalName();

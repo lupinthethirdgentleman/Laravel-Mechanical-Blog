@@ -2,19 +2,45 @@
 
 @section('style')
     <style>
-        @media (max-width: 400px) {
+        @media (max-width: 380px and min-width: 310px) {
             .title1{
-                font-size: 45px!important;
+                font-size: 35px!important;
             }
             .title2{
-                font-size: 25px!important;
+                font-size: 15px!important;
             }
             .title3{
-                font-size: 40px!important;
-            }
-            .title4{
                 font-size: 30px!important;
             }
+            .title4{
+                font-size: 20px!important;
+            }
+        }
+        @media (max-width: 420px) {
+            .title1{
+                font-size: 35px!important;
+            }
+            .title2{
+                font-size: 15px!important;
+            }
+            .title3{
+                font-size: 30px!important;
+            }
+            .title4{
+                font-size: 20px!important;
+            }
+            /* .title1{
+                font-size: 40px!important;
+            }
+            .title2{
+                font-size: 20px!important;
+            }
+            .title3{
+                font-size: 35px!important;
+            }
+            .title4{
+                font-size: 25px!important;
+            } */
 
             .slick-list {
                 padding-bottom: 70px;

@@ -103,7 +103,7 @@
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-                            <input id="photo" name="photos[]" type="file" class="file" data-show-upload="false" data-browse-on-zone-click="true" multiple required>
+                            <input id="photo" accept="video/*" name="photos[]" type="file" class="file" data-show-upload="false" data-browse-on-zone-click="true" multiple required>
                         </div>
 
                     </div>
