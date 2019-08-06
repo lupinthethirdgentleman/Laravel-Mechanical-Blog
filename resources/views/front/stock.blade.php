@@ -205,7 +205,14 @@
                     <div class="stock_img_div">
                         <img height="150" width="270" src="{{asset('image/stock')}}/{{$stock->id}}/{{$stock->stock_image}}">
                         <h3 style="color: #05acf0;">{{$stock->name}}</h3>
-                        <p>Date added: {{$stock->created_at}}</p>
+                        <p>Date added: <b>{{$stock->created_at}}</b></p>
+                        <p>Stock Status: 
+                            @if ($stock->status === 'on')
+                                <b style="color: green;">In Stock</b>
+                            @else ($stock->status === 'off')
+                                <b style="color: red;">Out Stock</b>
+                            @endif
+                        </p>
                         <button type="button" class="btn btn-primary btn-lg details" data-id = "{{$stock->id}}"
                                 data-name="{{$stock->name}}" data-price="{{$stock->price}}" data-make="{{$stock->make}}"
                                 data-model="{{$stock->stock_model}}" data-year="{{$stock->year}}"

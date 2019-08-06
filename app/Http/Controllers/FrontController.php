@@ -81,6 +81,11 @@ class FrontController extends Controller
         $data->year = $request->year;
         $data->datetime = $request->datetime;
         $data->save();
+
+        // (new User)->forceFill([
+        //     'name' => 'Their name',
+        //     'email' => 'pooh19952019@gmail.com',
+        // ])->notify(new MailMessage);
         return back();
     }
 
@@ -93,7 +98,7 @@ class FrontController extends Controller
 
     public function stock(){
         $info = DB::table('contact_infos')->where('id','1')->get()->first();
-        $stocks = DB::table('stocks')->where('status', 'on')->get();
+        $stocks = DB::table('stocks')->get();
         return view('front.stock' ,['contact'=>$info,'stocks' => $stocks]);
     }
 

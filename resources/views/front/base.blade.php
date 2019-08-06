@@ -26,6 +26,10 @@
     <script src="{{asset('assets_anwarhx/js/slick.min.js')}}"></script>
 
     <link rel="stylesheet" href="{{asset('css/stylesheet.css')}}" type="text/css" charset="utf-8" />
+    
+    
+
+
 
     @yield('style')
 

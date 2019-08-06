@@ -15,15 +15,10 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>
-                                MANAGE SLIDES
-                            </h2>
+             
                         </div>
                         <div class="body">
-                            <div class="row" style="margin: 0;margin-bottom: 10px">
-                                <a href="{{asset('/admin/create_slide')}}" class="btn btn-primary" style="float: right">Create New</a>
-
-                            </div>
+                     
 
                             <input type="hidden" id="base_url" value="{{asset('')}}">
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
@@ -41,7 +36,7 @@
                                         <th>Model</th>
                                         <th>Year</th>
                                         <th>Datetime</th>
-                                        {{--<th style="width: 10%">STATUS</th>--}}
+                                      
                                     </tr>
                                     </thead>
                                     <tfoot>
@@ -58,18 +53,21 @@
                                     </tr>
                                     </tfoot>
                                     <tbody>
-                                    <?php $n = 1 ?>
-                                    @foreach($messages as $message)
-                                        <td>{{$n}}</td>
-                                        <td>{{$message->first_name}}</td>
-                                        <td>{{$message->last_name}}</td>
-                                        <td>{{$message->contact_No}}</td>
-                                        <td>{{$message->make}}</td>
-                                        <td>{{$message->m_model}}</td>
-                                        <td>{{$message->year}}</td>
-                                        <td>{{$message->datetime}}</td>
-                                    <?php $n+=1 ?>
-                                    @endforeach
+                                        <?php $n=1 ?>
+                                        @foreach($messages as $message)
+                                        <tr>
+                                            <td>{{$n}}</td>
+                                            <td>{{$message->first_name}}</td>
+                                            <td>{{$message->last_name}}</td>
+                                            <td>{{$message->contact_No}}</td>
+                                            <td>{{$message->make}}</td>
+                                            <td>{{$message->m_model}}</td>
+                                            <td>{{$message->year}}</td>
+                                            <td>{{$message->datetime}}</td>
+                                        </tr>
+                                        <?php $n++ ?>
+                                        @endforeach
+                                        
 
                                     </tbody>
                                 </table>

@@ -382,7 +382,10 @@ class AdminController extends Controller
 
     public function contact_messages(){
         $data = DB::table('messages')->get();
+        // echo($data);
+        // exit(0);
         return view('admin.contact_messages.lists', ['messages' => $data]);
+        // return view('admin.mechanical_gallery.lists', ['galleries'=>$data]);
     }
 
     public function change() {
@@ -392,18 +395,16 @@ class AdminController extends Controller
         return view('admin.change.list', ['info' => $data]);
     }
 
-    public function update_user_info(Request $request){
-        Validator::make($data, [
-            // 'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            // 'password' => 'required|string|min:6|confirmed',
-        ]);
-        //$data = DB::table('contact_infos')->where('email',$request->email);
-        //ContactInfo::All()->first()->update(['phone'=>$request->phone, 'email'=>$request->email, 'address'=>$request->address]);
+    public function update_user_info(Request $request) {
+        // echo('ok');
+        // exit(0);
+        // Validator::make($data, [
+        
+        //     'email' => 'required|string|email|max:255|unique:users',
+        // ]);
 
         DB::table('users')->update(['email'=>$request->email, 'password'=> Hash::make($request->password)] );
-        // echo("OK");
-        // DB::table('contact_infos')->where('id','1')->update(['phone'=>$request->phone, 'email'=>$request->email, 'address'=>$request->address]);
+        
         return back();
     }
 
