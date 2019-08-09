@@ -38,10 +38,12 @@
                                 <table class="table table-bordered table-striped table-hover js-basic-example dataTable slides">
                                     <thead>
                                     <tr>
-                                        <th style="width:3%">No</th>
-                                        <th style="width: 15%">Main Image</th>
-                                        <th style="width: 13%">Right Image</th>
-                                        <th style="width: 13%">Left Image</th>
+                                        <th style="width: 2%">No</th>
+                                        <th style="width: 10%">Desktop Image</th>
+                                        <th style="width: 10%">Mobile Image</th>
+                                        <th style="width: 10%">Main Image</th>
+                                        <th style="width: 8%">Right Image</th>
+                                        <th style="width: 8%">Left Image</th>
                                         <th>Title 1</th>
                                         <th>Title 2</th>
                                         <th>Title 3</th>
@@ -52,10 +54,12 @@
                                     </thead>
                                     <tfoot>
                                     <tr>
-                                        <th style="width:3%">No</th>
-                                        <th style="width: 15%">Main Image</th>
-                                        <th style="width: 13%">Right Image</th>
-                                        <th style="width: 13%">Left Image</th>
+                                        <th style="width: 2%">No</th>
+                                        <th style="width: 10%">Desktop Image</th>
+                                        <th style="width: 10%">Mobile Image</th>
+                                        <th style="width: 10%">Main Image</th>
+                                        <th style="width: 8%">Right Image</th>
+                                        <th style="width: 8%">Left Image</th>
                                         <th>Title 1</th>
                                         <th>Title 2</th>
                                         <th>Title 3</th>
@@ -71,6 +75,8 @@
 
                                         <tr>
                                             <td>{{$n}}</td>
+                                            <td><img style="width: 95%;" src="{{asset('/assets_anwarhx/img/slider/')}}/{{$slide->id}}/{{$slide->desktop_image}}"/></td>
+                                            <td><img style="width: 95%;" src="{{asset('/assets_anwarhx/img/slider/')}}/{{$slide->id}}/{{$slide->mobile_image}}"/></td>
                                             <td><img style="width: 95%;" src="{{asset('/assets_anwarhx/img/slider/')}}/{{$slide->id}}/{{$slide->main_image}}"/></td>
                                             <td>
                                                 @if($slide->right_image != '')

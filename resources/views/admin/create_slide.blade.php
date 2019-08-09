@@ -533,6 +533,31 @@
 
 
                                 <br>
+
+                                <div class="row clearfix">
+                                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                        <label for="desktop_image">Desktop Image</label>
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7" style="padding-right: 40px">
+
+                                        <input id="desktop_image" name="desktop_image" type="file" class="file" data-show-upload="false" data-browse-on-zone-click="true" required>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="row clearfix">
+                                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                        <label for="mobile_image">Mobile Image</label>
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7" style="padding-right: 40px">
+
+                                        <input id="mobile_image" name="mobile_image" type="file" class="file" data-show-upload="false" data-browse-on-zone-click="true" required>
+
+                                    </div>
+
+                                </div>
+
                                 <div class="row clearfix">
                                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                         <label for="main_image">Slide Main Image</label>

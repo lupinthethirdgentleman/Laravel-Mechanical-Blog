@@ -61,6 +61,21 @@ class AdminController extends Controller
         $main_image_title = '';
         $right_image_title = '';
         $left_image_title = '';
+        $desktop_image_title = '';
+        $mobile_image_title = '';
+
+        if ($request->hasFile('desktop_image')){
+            $desktop_image = $request->file('desktop_image');
+            $desktop_image_title = $desktop_image->getClientOriginalName();
+            $desktop_image->move(public_path().'/assets_anwarhx/img/slider/'.$last_id.'/',$desktop_image_title);
+        }
+
+        if ($request->hasFile('mobile_image')){
+            $mobile_image = $request->file('mobile_image');
+            $mobile_image_title = $mobile_image->getClientOriginalName();
+            $mobile_image->move(public_path().'/assets_anwarhx/img/slider/'.$last_id.'/',$mobile_image_title);
+        }
+
         if ($request->hasFile('main_image')){
             $main_image = $request->file('main_image');
             $main_image_title = $main_image->getClientOriginalName();
@@ -77,10 +92,14 @@ class AdminController extends Controller
             $left_image->move(public_path().'/assets_anwarhx/img/slider/'.$last_id.'/',$left_image_title);
         }
 
+
+
         $slide->main_image = $main_image_title;
         $slide->right_image = $right_image_title;
         $slide->left_image = $left_image_title;
-
+        $slide->desktop_image = $desktop_image_title;
+        $slide->mobile_image = $mobile_image_title;
+        // die($slide->mobile_iamge);
         $slide->save();
 
         return redirect('/admin')->withSuccess('success');

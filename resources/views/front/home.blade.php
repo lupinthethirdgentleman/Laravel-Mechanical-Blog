@@ -3,17 +3,24 @@
 @section('style')
     <style>
         @media (max-width: 420px) {
+            .caption {
+                line-height:25px;
+            }
+
+            .part_1, .part_2, .part_3, .part_4 {
+                margin-bottom: 20px !important;
+            }
             .title1{
                 font-size: 35px!important;
             }
             .title2{
-                font-size: 15px!important;
+                font-size: 25px!important;
             }
             .title3{
-                font-size: 30px!important;
+                font-size: 35px!important;
             }
             .title4{
-                font-size: 20px!important;
+                font-size: 25px!important;
             }
             /* .title1{
                 font-size: 40px!important;
@@ -41,7 +48,8 @@
             }
 
             .part_4 {
-                width: 50% !important;
+                width: 70% !important;
+                margin-left:15% !important;
             }
 
             h1, h2, h3 {
@@ -59,7 +67,7 @@
             }
 
             .caption {
-                top: 0px !important;
+                top: 10px !important;
             }
 
 
@@ -88,14 +96,13 @@
         }
 
         .part_1, .part_2, .part_3, .part_4 {
-	    	margin-bottom: 20px !important;
+	    	margin-bottom: 50px;
 	    }
 
         .img_center {
             margin-left:auto;
             margin-right:auto;
         }
-
 
 
 
@@ -114,8 +121,8 @@
     <div class="slider">
         @foreach($slides as $slide)
             <div class="slick-slide">
-                <img style="height:100%; width:100%;object-fit:cover;" src="{{asset('assets_anwarhx/img/slider')}}/{{$slide->id}}/{{$slide->main_image}}">
-                <div class="caption" style="z-index: 1">
+                <img id="real_img" style="height:100%; width:100%;object-fit:cover;" src="{{asset('assets_anwarhx/img/slider')}}/{{$slide->id}}/{{$slide->desktop_image}}">
+                <!-- <div class="caption" style="z-index: 1">
                     <div class="part_1">
                         <h1 class="title1" style="text-align: left;font-family: {{$slide->title1_style}};font-size: {{$slide->title1_size}};
                                 color:{{$slide->title1_color}}">{{$slide->title1}}</h1>
@@ -126,7 +133,7 @@
                     <div class="part_2">
                         @if($slide->right_image != '')
 
-                        <img class="img_center responsive_image" style="width:80%;" src="{{asset('assets_anwarhx/img/slider')}}/{{$slide->id}}/{{$slide->right_image}}">
+                        <img class="img_center responsive_image" style="width:100%;" src="{{asset('assets_anwarhx/img/slider')}}/{{$slide->id}}/{{$slide->right_image}}">
 
                         @endif
                     </div>
@@ -147,12 +154,12 @@
                     <div class="part_5">
                         @if($slide->right_image != '')
 
-                        <img class="img_center" style="width:50%; top:0; right :5% ; z-index:-1;position:absolute;" src="{{asset('assets_anwarhx/img/slider')}}/{{$slide->id}}/{{$slide->right_image}}">
+                        <img class="img_center" style="width:60%; top:-70px; right :5% ; z-index:-1;position:absolute;" src="{{asset('assets_anwarhx/img/slider')}}/{{$slide->id}}/{{$slide->right_image}}">
 
                         @endif
                     </div>
 
-                </div>
+                </div> -->
             </div>
 
         @endforeach
@@ -218,7 +225,11 @@
 
 @section('script')
     <script>
-
-
+    $(window).resize(function() {
+        // console.log($(this).width());
+        if($(this).width() <= 420) $('#real_img').attr('src', "{{asset('assets_anwarhx/img/slider')}}/{{$slide->id}}/{{$slide->mobile_image}}");
+        else $('#real_img').attr('src', "{{asset('assets_anwarhx/img/slider')}}/{{$slide->id}}/{{$slide->desktop_image}}");
+        // $('#resizeText').text('Width: ' + $(this).width() + ', Height: ' + $(this).height());
+    });
     </script>
 @endsection
