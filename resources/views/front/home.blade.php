@@ -70,7 +70,12 @@
                 top: 10px !important;
             }
 
-
+            #real_img2 {
+                display:block !important;
+            }
+            #real_img1 {
+                display:none !important;
+            }
 
         }
 
@@ -104,7 +109,13 @@
             margin-right:auto;
         }
 
-
+        #real_img1 {
+            display:block;
+        }
+        #real_img2 {
+            display:none;
+        }
+        
 
     </style>
 
@@ -121,7 +132,8 @@
     <div class="slider">
         @foreach($slides as $slide)
             <div class="slick-slide">
-                <img id="real_img" style="height:100%; width:100%;object-fit:cover;" src="{{asset('assets_anwarhx/img/slider')}}/{{$slide->id}}/{{$slide->desktop_image}}">
+                <div id="real_img1" style="height:100%; width:100%;object-fit:cover;"><img  style="height:100%; width:100%;object-fit:cover;" src="{{asset('assets_anwarhx/img/slider')}}/{{$slide->id}}/{{$slide->desktop_image}}"></div>
+                <div id="real_img2" style="height:100%; width:100%;object-fit:cover;"><img  style="height:100%; width:100%;object-fit:cover;" src="{{asset('assets_anwarhx/img/slider')}}/{{$slide->id}}/{{$slide->mobile_image}}"></div>
                 <!-- <div class="caption" style="z-index: 1">
                     <div class="part_1">
                         <h1 class="title1" style="text-align: left;font-family: {{$slide->title1_style}};font-size: {{$slide->title1_size}};
@@ -225,11 +237,25 @@
 
 @section('script')
     <script>
-    $(window).resize(function() {
-        // console.log($(this).width());
-        if($(this).width() <= 420) $('#real_img').attr('src', "{{asset('assets_anwarhx/img/slider')}}/{{$slide->id}}/{{$slide->mobile_image}}");
-        else $('#real_img').attr('src', "{{asset('assets_anwarhx/img/slider')}}/{{$slide->id}}/{{$slide->desktop_image}}");
-        // $('#resizeText').text('Width: ' + $(this).width() + ', Height: ' + $(this).height());
-    });
+
+       
+        
+        // $(window).resize(function(){
+        //     if($(this).width() <= 420)
+        //     {
+        //         $("#real_img1").css("display", "none");
+        //         $("#real_img2").css("display", "block");
+        //     }
+
+        //     else
+        //     {
+        //         $("#real_img1").css("display", "block");
+        //         $("#real_img2").css("display", "none");
+        //     }
+        
+
+        // });
+
+
     </script>
 @endsection
