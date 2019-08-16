@@ -133,6 +133,37 @@
                                     </div>
                                 </div>
 
+                                <div class="row clearfix">
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                        <div class="form-group">
+                                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                                <label for="warranty">Warranty</label>
+                                            </div>
+                                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7" style="padding-right: 40px">
+
+                                                <input id="warranty" name="warranty" type="file" class="file" data-show-upload="false" data-browse-on-zone-click="true" required>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 form-control-label">
+                                                <label for="odometer">Odometer</label>
+                                            </div>
+                                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="number" id="odometer" name="odometer" class="form-control" placeholder="Enter Odometer" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
                                 <br>
                                 <div class="row clearfix">
                                     <div class="form-group">
@@ -147,6 +178,8 @@
                                     </div>
 
                                 </div>
+
+
 
                                 <div class="row clearfix">
                                     <div class="col-sm-5 col-sm-offset-1">

@@ -28,7 +28,8 @@ class FrontController extends Controller
             }
         }
 
-        $n = intdiv(count($galleries),6);
+        // $n = intdiv(count($galleries),6);
+        $n = count($galleries);
 
         return view('front.mechanical',['contact'=>$info, 'galleries'=>$galleries, 'n'=>$n]);
     }
@@ -53,7 +54,11 @@ class FrontController extends Controller
             }
         }
 
-        $n = intdiv(count($galleries),6);
+        // $n = intdiv(count($galleries),6);
+        $n = count($galleries);
+        // echo($n);
+        // exit(0);
+        // die($n);
 
         return view('front.body_works', ['contact'=>$info, 'galleries'=>$galleries, 'n'=>$n]);
     }

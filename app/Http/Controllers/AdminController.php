@@ -198,11 +198,18 @@ class AdminController extends Controller
         $stock->stock_model = $request->stock_model;
         $stock->year = $request->year;
         $stock->description = $request->description;
+        $stock->odometer = $request->odometer;
 
         $image_title_1 = '';
         $image_title_2 = '';
         $image_title_3 = '';
         $image_title_4 = '';
+
+        if ($request->hasFile('warranty')){
+            $image = $request->file('warranty');
+            $warranty = $image->getClientOriginalName();
+            $image->move(public_path().'/image/stock/'.$last_id.'/',$warranty);
+        }
 
         if ($request->hasFile('stock_image')){
             $image = $request->file('stock_image');
@@ -232,6 +239,7 @@ class AdminController extends Controller
             $image_4->move(public_path().'/image/stock/'.$last_id.'/',$image_title_4);
         }
 
+        $stock->warranty = $warranty;
         $stock->stock_image = $image_title;
         $stock->image_1 = $image_title_1;
         $stock->image_2 = $image_title_2;

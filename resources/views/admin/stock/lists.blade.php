@@ -38,12 +38,14 @@
                                     <thead>
                                     <tr>
                                         <th style="width:3%">No</th>
-                                        <th style="width: 15%">Stock Image</th>
+                                        <th style="width: 10%">Stock Image</th>
+                                        <th style="width: 10%">Warranty</th>
                                         <th style="width: 13%">Name</th>
                                         <th style="width: 6%">Price</th>
                                         <th style="width: 9%">Make</th>
                                         <th style="width: 9%">Model</th>
                                         <th>Year</th>
+                                        <th>Odometer</th>
                                         <th>Description</th>
                                         <th style="width: 11%">STATUS</th>
                                         <th>Action</th>
@@ -54,12 +56,14 @@
 
                                     <tr>
                                         <th style="width:3%">No</th>
-                                        <th style="width: 15%">Stock Image</th>
+                                        <th style="width: 10%">Stock Image</th>
+                                        <th style="width: 10%">Warranty</th>
                                         <th style="width: 13%">Name</th>
                                         <th style="width:6%">Price</th>
                                         <th style="width:9%">Make</th>
                                         <th style="width: 9%">Model</th>
                                         <th>Year</th>
+                                        <th>Odometer</th>
                                         <th>Description</th>
                                         <th style="width: 11%">STATUS</th>
                                         <th>Action</th>
@@ -73,11 +77,13 @@
                                         <tr>
                                             <td>{{$n}}</td>
                                             <td><img style="width: 95%" src="{{asset('/image/stock')}}/{{$stock->id}}/{{$stock->stock_image}}"/></td>
+                                            <td><img style="width: 95%" src="{{asset('/image/stock')}}/{{$stock->id}}/{{$stock->warranty}}"/></td>
                                             <td>{{$stock->name}}</td>
                                             <td>{{$stock->price}}</td>
                                             <td>{{$stock->make}}</td>
                                             <td>{{$stock->stock_model}}</td>
                                             <td>{{$stock->year}}</td>
+                                            <td>{{$stock->odometer}}</td>
                                             <td>{{$stock->description}}</td>
                                             <td>
                                                 @if($stock->status == 'on')

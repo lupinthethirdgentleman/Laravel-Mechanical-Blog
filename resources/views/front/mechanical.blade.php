@@ -221,14 +221,14 @@
                 @for($i = 0 ; $i<$n;$i++)
                     <div class="col-4">
 
-                        @if($galleries[0+6*$i]->extension == 'image')
-                            <a href="{{asset('image/mech_gallery')}}/{{$galleries[0+6*$i]->photo_name}}" data-sub-html="Demo Description">
-                                <img class="gallery_img_height" src="{{asset('image/mech_gallery')}}/{{$galleries[0+6*$i]->photo_name}}">
+                        @if($galleries[$i]->extension == 'image')
+                            <a href="{{asset('image/mech_gallery')}}/{{$galleries[$i]->photo_name}}" data-sub-html="Demo Description">
+                                <img class="gallery_img_height" src="{{asset('image/mech_gallery')}}/{{$galleries[$i]->photo_name}}">
                             </a>
                         @else
                             <video class="gallery_img_height" controls>
-                                <source src="{{asset('image/mech_gallery')}}/{{$galleries[0+6*$i]->photo_name}}" type="video/mp4">
-                                <source src="{{asset('image/mech_gallery')}}/{{$galleries[0+6*$i]->photo_name}}" type="video/ogg">
+                                <source src="{{asset('image/mech_gallery')}}/{{$galleries[$i]->photo_name}}" type="video/mp4">
+                                <source src="{{asset('image/mech_gallery')}}/{{$galleries[$i]->photo_name}}" type="video/ogg">
                                 Your browser does not support HTML5 video.
                             </video>
                         @endif
@@ -236,79 +236,6 @@
 
                     </div>
 
-                    <div class="col-4">
-
-                        @if($galleries[1+6*$i]->extension == 'image')
-                            <a href="{{asset('image/mech_gallery')}}/{{$galleries[1+6*$i]->photo_name}}" data-sub-html="Demo Description">
-                                <img class="gallery_img_height" src="{{asset('image/mech_gallery')}}/{{$galleries[1+6*$i]->photo_name}}">
-                            </a>
-                        @else
-                            <video class="gallery_img_height" controls>
-                                <source src="{{asset('image/mech_gallery')}}/{{$galleries[1+6*$i]->photo_name}}" type="video/mp4">
-                                <source src="{{asset('image/mech_gallery')}}/{{$galleries[1+6*$i]->photo_name}}" type="video/ogg">
-                                Your browser does not support HTML5 video.
-                            </video>
-                        @endif
-
-                    </div>
-
-                    <div class="col-4">
-                        @if($galleries[2+6*$i]->extension == 'image')
-                            <a href="{{asset('image/mech_gallery')}}/{{$galleries[2+6*$i]->photo_name}}" data-sub-html="Demo Description">
-                                <img class="gallery_img_height" src="{{asset('image/mech_gallery')}}/{{$galleries[2+6*$i]->photo_name}}">
-                            </a>
-                        @else
-                            <video class="gallery_img_height" controls>
-                                <source src="{{asset('image/mech_gallery')}}/{{$galleries[2+6*$i]->photo_name}}" type="video/mp4">
-                                <source src="{{asset('image/mech_gallery')}}/{{$galleries[2+6*$i]->photo_name}}" type="video/ogg">
-                                Your browser does not support HTML5 video.
-                            </video>
-                        @endif
-
-                    </div>
-                    <div class="col-4 one">
-                        @if($galleries[3+6*$i]->extension == 'image')
-                            <a href="{{asset('image/mech_gallery')}}/{{$galleries[3+6*$i]->photo_name}}" data-sub-html="Demo Description">
-                                <img class="gallery_img_width" src="{{asset('image/mech_gallery')}}/{{$galleries[3+6*$i]->photo_name}}">
-                            </a>
-                        @else
-                            <video class="gallery_img_width" controls>
-                                <source src="{{asset('image/mech_gallery')}}/{{$galleries[3+6*$i]->photo_name}}" type="video/mp4">
-                                <source src="{{asset('image/mech_gallery')}}/{{$galleries[3+6*$i]->photo_name}}" type="video/ogg">
-                                Your browser does not support HTML5 video.
-                            </video>
-                        @endif
-
-                    </div>
-                    <div class="col-4 two">
-                        @if($galleries[4+6*$i]->extension == 'image')
-                            <a href="{{asset('image/mech_gallery')}}/{{$galleries[4+6*$i]->photo_name}}" data-sub-html="Demo Description">
-                                <img class="gallery_img_height" src="{{asset('image/mech_gallery')}}/{{$galleries[4+6*$i]->photo_name}}">
-                            </a>
-                        @else
-                            <video width="100%" class="gallery_img_height" controls>
-                                <source src="{{asset('image/mech_gallery')}}/{{$galleries[4+6*$i]->photo_name}}" type="video/mp4">
-                                <source src="{{asset('image/mech_gallery')}}/{{$galleries[4+6*$i]->photo_name}}" type="video/ogg">
-                                Your browser does not support HTML5 video.
-                            </video>
-                        @endif
-                    </div>
-                    <div class="col-4 three">
-
-                        @if($galleries[5+6*$i]->extension == 'image')
-
-                            <a href="{{asset('image/mech_gallery')}}/{{$galleries[5+6*$i]->photo_name}}" data-sub-html="Demo Description">
-                                <img class="gallery_img_width" src="{{asset('image/mech_gallery')}}/{{$galleries[5+6*$i]->photo_name}}">
-                            </a>
-
-                        @else
-                            <video width="100%" class="gallery_img_width" controls>
-                                <source src="{{asset('image/mech_gallery')}}/{{$galleries[5+6*$i]->photo_name}}" type="video/mp4">
-                                <source src="{{asset('image/mech_gallery')}}/{{$galleries[5+6*$i]->photo_name}}" type="video/ogg">
-                                Your browser does not support HTML5 video.
-                            </video>
-                        @endif
-                    </div>
 
                 @endfor
 

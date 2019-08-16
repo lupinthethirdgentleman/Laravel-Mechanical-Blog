@@ -213,9 +213,10 @@
                                 <b style="color: red;">Out Stock</b>
                             @endif
                         </p>
+                        <p>Odometer : <b>{{$stock->odometer}}</b></p>
                         <button type="button" class="btn btn-primary btn-lg details" data-id = "{{$stock->id}}"
                                 data-name="{{$stock->name}}" data-price="{{$stock->price}}" data-make="{{$stock->make}}"
-                                data-model="{{$stock->stock_model}}" data-year="{{$stock->year}}"
+                                data-model="{{$stock->stock_model}}" data-year="{{$stock->year}}" data-warranty="{{$stock->warranty}}"
                                 data-description="{{$stock->description}}" data-image="{{$stock->stock_image}}"
                                 data-image_1 = "{{$stock->image_1}}" data-image_2 = "{{$stock->image_2}}"
                                 data-image_3 = "{{$stock->image_3}}" data-image_4 = "{{$stock->image_4}}" >Details</button>
@@ -256,6 +257,7 @@
                             <h5 class="description">Lorem ipsum dolor sit amet, consetetur adipiscing ellt. Sed ned mattls massa. Ut non tellus non est lacinia sulsmod quis vitae nunc. Aliquam ve</h5>
                             <p>Uploaded by wodville motors</p>
                             <span style="color: #05acf0;">View other listings from this member</span><br>
+                            <img class="warranty" src="image/stock/2.png">
                             <div style="margin: 10px">
                                 <button type="button" class="btn btn-primary" style="padding: 8px 20px;">Add to Cart</button>&nbsp;&nbsp;
                                 <button type="button" class="btn btn-default" style="padding: 8px 20px;color: #05acf0;border: 1px solid #05acf0">Members Profile</button>
@@ -312,6 +314,7 @@
             $('#myModa span.year').text($(this).data("year"));
             $('#myModa h5.description').text($(this).data("description"));
             $('#myModa img.stock_modal_img').attr('src','image/stock/'+$(this).data("id")+'/'+$(this).data("image"));
+            $('#myModa img.warranty').attr('src','image/stock/'+$(this).data("id")+'/'+$(this).data("warranty"));
 
             if ($(this).data("image_1") != ''){
                 $('#myModa img.stock_modal_img_1').attr('src','image/stock/'+$(this).data("id")+'/'+$(this).data("image_1"));
