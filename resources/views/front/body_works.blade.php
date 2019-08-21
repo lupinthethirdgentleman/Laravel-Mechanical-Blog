@@ -73,6 +73,11 @@
             font-style: italic;
             color: gray;
         }
+        .main_p {
+            width: 600px;
+            font-style: italic;
+            margin: -20px 0 0 100px;
+        }
         .logo_left{position: absolute;top: 140px;width: 394px;}
 
         @media (max-width: 990px) {
@@ -132,6 +137,12 @@
             }
         }
         @media (max-width: 480px) {
+
+            .main_p {
+                width: 100%;
+                font-style: italic;
+                margin: 0;
+            }
             .logo_left{
                 position: absolute;
                 top: 0;
@@ -190,8 +201,9 @@
     <div class="container">
 
         <h2 style="float: right">PAINT &nbsp;<img src="image/dot.png" style="width: 16px">&nbsp; PANEL REPAIRS</h2>
-        <img src="image/body_header.png" width="100%">
+        <img src="image/p_back.png" width="100%">
         <img src="image/body_bu.png" class="logo_left" style="">
+        <p class="main_p">“ Professional Finish Every time. At Just Jap Auto we Provide a fully Equipped Crash Repairs Adelaide, with the best technology in paint system and low bake spray booth ensuring a perfect match and finish every time. Our Paint and Panel Adelaide, Department is always looking for new technology in materials we use to insure we achieve high quality Job. „</p>
 
         <div class="row" style="text-align: center">
             <h2 class="serivce"><img src="image/line.png">&nbsp;&nbsp; OUR SERVICES &nbsp;&nbsp;<img src="image/line.png"></h2>

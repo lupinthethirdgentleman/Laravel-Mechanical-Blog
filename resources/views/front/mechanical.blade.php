@@ -71,6 +71,34 @@
             color: gray;
         }
 
+        .b2 {
+            width:400px;
+            height:200px;
+        }
+
+        .b3 {
+            margin:10px 0 0 -50px;
+            width: 150px;
+            height: 200px;
+        }
+
+        .b4 {
+            font-style: italic;
+            font-size:17px;
+            margin: 80px 0 100px 30px;
+            /* margin-left: 30px; */
+            width:500px;
+            height:170px;
+        }
+
+        .b5 {
+            display:none;
+        }
+
+        .b234 {
+            margin-top:-70px;
+        }
+
         @media (max-width: 990px) {
             .col-3{
                 width: 250px;
@@ -118,6 +146,30 @@
         }
 
         @media (max-width: 480px) {
+
+            .b2 {
+                margin-top: 60px;
+                width: 300px;
+                height: 150px;
+            }
+
+            .b3 {
+                height: 160px;
+                width: 100px;
+                margin-top: 75px;
+            }
+
+            .b4 {
+                display: none;
+            }
+
+            .b5 {
+                font-style: italic;
+                font-size:14px;
+                display: block;
+                
+            }
+
             .serivce{
                 margin-bottom: 25px;
             }
@@ -165,7 +217,16 @@
     </div>
     <div class="container">
         <h2 class="text-uppercase" style="text-align: center;">ADELIADE AUTO SERVICE &nbsp;<img src="image/dot.png" style="width: 16px">&nbsp; CAR SERVICE &nbsp;<img src="image/dot.png" style="width: 16px">&nbsp; MECHANICAL REPAIRS</h2>
-        <img src="image/heade.png" alt="body-image" width="100%">
+        <img src="image/b1.PNG" alt="body-image" width="100%">
+        <div style="display:flex;" class="b234">
+            <img src="image/b2.PNG" class="b2">
+            <img src="image/b3.PNG" class="b3">
+            <!-- <img src="image/b4.PNG" class="b4"> -->
+            <p class="b4">“ Auto Service in Adelaide Center dedicated to Customer Satisfcation. At Just Jap we pride ourselves in our workmanship and Service Quality we deliver each customers. Our dedicated team ensures your car receives the best treatment while her stay with us.Our Auto service	team will go through list of safety checks to ensure your vehicle is updated and report any isssues. We push ourselves to provide best Car Service Adelaide at very afforadable price and set become highly reputable Mechanical Repair Adelaide „</p>
+        </div>
+        <p class="b5">“ Auto Service in Adelaide Center dedicated to Customer Satisfcation. At Just Jap we pride ourselves in our workmanship and Service Quality we deliver each customers. Our dedicated team ensures your car receives the best treatment while her stay with us.Our Auto service	team will go through list of safety checks to ensure your vehicle is updated and report any isssues. We push ourselves to provide best Car Service Adelaide at very afforadable price and set become highly reputable Mechanical Repair Adelaide ”</p>
+
+        <!-- <img src="image/b4.PNG" alt="body-image" width="10%"> -->
 
         <div class="row" style="text-align: center">
             <h2 class="serivce"><img src="image/line.png">&nbsp;&nbsp; OUR SERVICES &nbsp;&nbsp;<img src="image/line.png"></h2>
